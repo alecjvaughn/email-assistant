@@ -1,0 +1,25 @@
+{
+  "name": "email-assistant",
+  "version": "1.0.0",
+  "description": "An intelligent assistant for managing emails.",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecjvaughn/email-assistant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/alecjvaughn/email-assistant/issues"
+  },
+  "homepage": "https://github.com/alecjvaughn/email-assistant#readme",
+  "devDependencies": {
+    "@types/google-apps-script": "^2.0.9",
+    "vitest": "^4.1.8"
+  }
+}

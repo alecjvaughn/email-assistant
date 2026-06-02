@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "labels": {
+    "talent": {
+      "nested": true,
+      "description": "Recruitment and talent related emails"
+    },
+    "finance": {
+      "nested": true,
+      "description": "Payments and subscriptions"
+    }
+  },
+  "rules": [
+    {
+      "id": "rule_1",
+      "name": "Job Recruitment",
+      "type": "sender_match",
+      "pattern": "*@company.com",
+      "target_label": "talent/Company Name"
+    }
+  ],
+  "digest": {
+    "enabled": true,
+    "frequency": "daily",
+    "time": "08:00"
+  }
+}
