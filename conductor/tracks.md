@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Implement Core Smart Labeling and JSON Configuration**
+- [~] **Track: Implement Core Smart Labeling and JSON Configuration**
   *Link: [./tracks/core_labeling_20260602/](./tracks/core_labeling_20260602/)*
