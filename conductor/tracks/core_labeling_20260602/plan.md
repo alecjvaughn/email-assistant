@@ -2,7 +2,7 @@
 
 ## Phase 1: Project Foundation & State Management
 - [x] Task: Set up Google Apps Script project with `clasp` 2e4891b
-- [ ] Task: Define JSON configuration schema for labels and rules
+- [x] Task: Define JSON configuration schema for labels and rules d588fe5
 - [ ] Task: Implement `ConfigurationService` (Read/Write JSON)
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Foundation & State Management' (Protocol in workflow.md)
 
