@@ -1,0 +1,8 @@
+{
+  "track_id": "core_labeling_20260602",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-06-02T10:00:00Z",
+  "updated_at": "2026-06-02T10:00:00Z",
+  "description": "Implement Core Smart Labeling and JSON Configuration"
+}
