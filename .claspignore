@@ -1,0 +1,8 @@
+**/*.test.ts
+**/*.test.js
+**/config.sample.json
+package.json
+package-lock.json
+node_modules/**
+conductor/**
+README.md

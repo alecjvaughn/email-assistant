@@ -7,12 +7,18 @@
     - [x] Write mock unit tests for property storage interaction
     - [x] Validate service logic using `src/config.sample.json` as real data
     - [x] Implement service with dependency injection for storage
+- [~] Task: Configure Build Pipeline for GAS Compatibility
+    - [ ] Install `esbuild` and `esbuild-gas-plugin`
+    - [ ] Implement `build.js` to bundle TypeScript into GAS-compatible JavaScript
+    - [ ] Configure `.clasp.json` to push from `dist/` directory
 - [ ] Task: Conductor - Phase 1 Verification & Sanity Check
     - [ ] Perform contract validation (local)
     - [ ] Run smoke test via `clasp run` to verify PropertyService availability
     - [ ] HITL Approval of testing results and pre-deployment state
 - [ ] Task: Conductor - User Manual Verification 'Phase 1: Project Foundation & State Management' (Protocol in workflow.md)
 
+> **Discovery Note (2026-06-02):** Google Apps Script (V8) does not support modern ES modules (`import`/`export`). To maintain modular TypeScript development while ensuring production compatibility, a build step is required. We will use `esbuild` with `esbuild-gas-plugin` to bundle our code into a flat global scope before pushing with `clasp`.
+...
 ## Phase 2: Gmail Integration & Labeling Logic
 - [ ] Task: Implement `GmailService` wrapper for label creation
     - [ ] Write mock unit tests for GmailApp interaction

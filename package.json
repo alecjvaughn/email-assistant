@@ -4,7 +4,8 @@
   "description": "An intelligent assistant for managing emails.",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "build": "node build.js && cp src/appsscript.json dist/"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,9 @@
   "homepage": "https://github.com/alecjvaughn/email-assistant#readme",
   "devDependencies": {
     "@types/google-apps-script": "^2.0.9",
+    "esbuild": "^0.28.0",
+    "esbuild-gas-plugin": "^0.10.0",
+    "typescript": "^6.0.3",
     "vitest": "^4.1.8"
   }
 }
