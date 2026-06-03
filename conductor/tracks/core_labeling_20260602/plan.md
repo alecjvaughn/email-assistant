@@ -3,10 +3,10 @@
 ## Phase 1: Project Foundation & State Management
 - [x] Task: Set up Google Apps Script project with `clasp` 2e4891b
 - [x] Task: Define JSON configuration schema for labels and rules d588fe5
-- [~] Task: Implement `ConfigurationService` (Read/Write JSON)
-    - [ ] Write mock unit tests for property storage interaction
-    - [ ] Validate service logic using `src/config.sample.json` as real data
-    - [ ] Implement service with dependency injection for storage
+- [x] Task: Implement `ConfigurationService` (Read/Write JSON) e54fba5
+    - [x] Write mock unit tests for property storage interaction
+    - [x] Validate service logic using `src/config.sample.json` as real data
+    - [x] Implement service with dependency injection for storage
 - [ ] Task: Conductor - Phase 1 Verification & Sanity Check
     - [ ] Perform contract validation (local)
     - [ ] Run smoke test via `clasp run` to verify PropertyService availability
