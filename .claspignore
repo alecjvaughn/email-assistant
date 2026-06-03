@@ -1,3 +1,4 @@
+src/**
 **/*.test.ts
 **/*.test.js
 **/config.sample.json

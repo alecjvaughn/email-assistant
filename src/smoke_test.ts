@@ -19,3 +19,6 @@ export function smokeTest() {
     return 'FAILURE: ' + e.message;
   }
 }
+
+// @ts-ignore
+global.smokeTest = smokeTest;
