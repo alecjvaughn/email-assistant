@@ -1,6 +1,13 @@
 import { StorageAdapter } from './storage';
 import * as fs from 'fs';
 
+/**
+ * Local file-system implementation of the StorageAdapter.
+ *
+ * @param {string} filePath - Path to the configuration file on the local filesystem.
+ * @method read - Reads the file content as UTF-8 string. Returns null if the file does not exist.
+ * @method write - Synchronously writes string data to the specified file path using UTF-8 encoding.
+ */
 export class FileStorage implements StorageAdapter {
   constructor(private filePath: string) {}
 

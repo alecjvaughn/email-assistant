@@ -1,4 +1,9 @@
-export function smokeTest() {
+/**
+ * Executes a smoke test to verify basic functionality in the Apps Script environment.
+ * 
+ * @return {string} 'SUCCESS' if the test passes, or an error message if it fails.
+ */
+export function smokeTest(): string {
   console.log('Starting Smoke Test...');
   
   try {
@@ -14,11 +19,18 @@ export function smokeTest() {
       console.error('PropertyService mismatch: ' + retrieved + ' !== ' + testValue);
       return 'FAILURE: Mismatch';
     }
-  } catch (e: any) {
-    console.error('PropertyService error: ' + e.message);
-    return 'FAILURE: ' + e.message;
+  } catch (e) {
+    const error = e as Error;
+    console.error('PropertyService error: ' + error.message);
+    return 'FAILURE: ' + error.message;
   }
 }
 
-// @ts-ignore
+/**
+ * Expose functions to the global scope for Google Apps Script.
+ */
+declare const global: {
+  smokeTest: typeof smokeTest;
+};
+
 global.smokeTest = smokeTest;

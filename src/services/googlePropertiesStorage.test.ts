@@ -1,8 +1,13 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
 import { GooglePropertiesStorage } from './googlePropertiesStorage';
 
+interface MockUserProperties {
+  getProperty: Mock;
+  setProperty: Mock;
+}
+
 describe('GooglePropertiesStorage', () => {
-  let mockProperties: any;
+  let mockProperties: MockUserProperties;
 
   beforeEach(() => {
     mockProperties = {
@@ -10,8 +15,7 @@ describe('GooglePropertiesStorage', () => {
       setProperty: vi.fn(),
     };
     
-    // @ts-ignore
-    global.PropertiesService = {
+    (global as any).PropertiesService = {
       getUserProperties: () => mockProperties
     };
   });
