@@ -1,4 +1,17 @@
-.clasp.json
+# Dependencies
 node_modules/
+
+# Build and Apps Script
 dist/
+.clasp.json
+
+# Testing and Coverage
+coverage/
+
+# Environment and Secrets
+.env
+*.log
+npm-debug.log*
+
+# OS specific
 .DS_Store
