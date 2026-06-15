@@ -1,3 +1,20 @@
+import { GooglePropertiesStorage } from './services/googlePropertiesStorage';
+import { ConfigurationService } from './services/configuration';
+import { GmailService } from './services/gmailService';
+import { LabelManager } from './services/labelManager';
+
+/**
+ * Interface for the Google Apps Script global scope.
+ */
+interface GasGlobal {
+  smokeTest: typeof smokeTest;
+  manualSyncTest: typeof manualSyncTest;
+  GooglePropertiesStorage: typeof GooglePropertiesStorage;
+  ConfigurationService: typeof ConfigurationService;
+  GmailService: typeof GmailService;
+  LabelManager: typeof LabelManager;
+}
+
 /**
  * Executes a smoke test to verify basic functionality in the Apps Script environment.
  * 
@@ -32,10 +49,40 @@ export function smokeTest(): string {
 }
 
 /**
- * Expose functions to the global scope for Google Apps Script.
+ * Manual verification function for Phase 2 labeling logic.
  */
-declare const global: {
-  smokeTest: typeof smokeTest;
-};
+export function manualSyncTest(): void {
+  const storage = new GooglePropertiesStorage();
+  const configService = new ConfigurationService(storage);
+  const gmailService = new GmailService();
+  const manager = new LabelManager(gmailService, configService);
 
-global.smokeTest = smokeTest;
+  console.log('Running Manual Sync Test...');
+
+  // 1. Manually set a test config in Properties
+  configService.setConfig({
+    version: '1.0',
+    labels: {
+      'TestCategory': { nested: true, description: 'Test' },
+      'TestCategory/SubTest': { nested: false }
+    },
+    rules: [],
+    digest: { enabled: false, frequency: 'daily', time: '09:00' }
+  });
+
+  // 2. Run sync
+  manager.syncLabels();
+  console.log("Sync complete. Please check your Gmail for 'TestCategory' and 'TestCategory/SubTest' labels.");
+}
+
+/**
+ * Expose functions and classes to the global scope for Google Apps Script.
+ */
+const gasGlobal = globalThis as unknown as GasGlobal;
+
+gasGlobal.smokeTest = smokeTest;
+gasGlobal.manualSyncTest = manualSyncTest;
+gasGlobal.GooglePropertiesStorage = GooglePropertiesStorage;
+gasGlobal.ConfigurationService = ConfigurationService;
+gasGlobal.GmailService = GmailService;
+gasGlobal.LabelManager = LabelManager;
