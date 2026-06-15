@@ -30,7 +30,7 @@
     - [x] Perform contract validation (local)
     - [x] Run smoke test via `clasp run` to verify GmailApp availability
     - [x] HITL Approval of testing results and pre-deployment state
-- [ ] Task: Conductor - User Manual Verification 'Phase 2: Gmail Integration & Labeling Logic' (Protocol in workflow.md)
+- [~] Task: Conductor - User Manual Verification 'Phase 2: Gmail Integration & Labeling Logic' (Protocol in workflow.md)
 
 ## Phase 3: AI Categorization & Logging
 - [ ] Task: Implement `CategorizationService` (AI API integration)
@@ -50,3 +50,4 @@
 ## Phase: Review Fixes
 - [x] Task: Apply review suggestions ff2e9d8
 - [x] Task: Apply documentation and type safety improvements 31dbf70
+- [x] Task: Apply low-priority configuration and type-safe scoping improvements ef39877
