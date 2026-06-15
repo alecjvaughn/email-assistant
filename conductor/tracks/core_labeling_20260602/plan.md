@@ -23,9 +23,9 @@
 - [x] Task: Implement `GmailService` wrapper for label creation 6411f81
     - [x] Write mock unit tests for GmailApp interaction
     - [x] Implementation of nested label creation logic
-- [ ] Task: Implement `LabelManager` for nested labeling logic (`talent/Company`)
-    - [ ] Write unit tests for nested label parsing and creation using sample data
-    - [ ] Implementation of manager logic
+- [x] Task: Implement `LabelManager` for nested labeling logic (`talent/Company`) 913f1e1
+    - [x] Write unit tests for nested label parsing and creation using sample data
+    - [x] Implementation of manager logic
 - [ ] Task: Conductor - Phase 2 Verification & Sanity Check
     - [ ] Perform contract validation (local)
     - [ ] Run smoke test via `clasp run` to verify GmailApp availability
