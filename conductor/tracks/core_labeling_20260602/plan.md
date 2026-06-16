@@ -19,7 +19,7 @@
 
 > **Discovery Note (2026-06-02):** Google Apps Script (V8) does not support modern ES modules (`import`/`export`). To maintain modular TypeScript development while ensuring production compatibility, a build step is required. We will use `esbuild` with `esbuild-gas-plugin` to bundle our code into a flat global scope before pushing with `clasp`.
 ...
-## Phase 2: Gmail Integration & Labeling Logic
+## Phase 2: Gmail Integration & Labeling Logic [checkpoint: 4fb4adc]
 - [x] Task: Implement `GmailService` wrapper for label creation 6411f81
     - [x] Write mock unit tests for GmailApp interaction
     - [x] Implementation of nested label creation logic
@@ -30,7 +30,7 @@
     - [x] Perform contract validation (local)
     - [x] Run smoke test via `clasp run` to verify GmailApp availability
     - [x] HITL Approval of testing results and pre-deployment state
-- [~] Task: Conductor - User Manual Verification 'Phase 2: Gmail Integration & Labeling Logic' (Protocol in workflow.md)
+- [x] Task: Conductor - User Manual Verification 'Phase 2: Gmail Integration & Labeling Logic' (Protocol in workflow.md) 4fb4adc
 
 ## Phase 3: AI Categorization & Logging
 - [ ] Task: Implement `CategorizationService` (AI API integration)
