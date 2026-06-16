@@ -1,4 +1,4 @@
-import { StorageAdapter } from './storage';
+import type { StorageAdapter } from './storage';
 
 /**
  * Google Apps Script PropertiesService implementation of the StorageAdapter.

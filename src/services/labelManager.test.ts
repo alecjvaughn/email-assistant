@@ -1,8 +1,9 @@
-import { describe, it, expect, vi, beforeEach, Mock } from 'vitest';
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import type { Mock } from 'vitest';
 import { LabelManager } from './labelManager';
 import { GmailService } from './gmailService';
 import { ConfigurationService } from './configuration';
-import { AppConfig } from '../models/config';
+import type { AppConfig } from '../models/config';
 
 /**
  * Tests for the LabelManager.

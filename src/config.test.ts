@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { AppConfig } from './models/config';
+import type { AppConfig } from './models/config';
 
 describe('Config Schema Validation', () => {
   it('should validate a basic config object', () => {
@@ -25,7 +25,7 @@ describe('Config Schema Validation', () => {
     };
 
     expect(config.version).toBe('1.0');
-    expect(config.labels.talent.nested).toBe(true);
-    expect(config.rules[0].type).toBe('sender_match');
+    expect(config.labels['talent']?.nested).toBe(true);
+    expect(config.rules[0]?.type).toBe('sender_match');
   });
 });

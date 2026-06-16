@@ -78,11 +78,11 @@ export function manualSyncTest(): void {
 /**
  * Expose functions and classes to the global scope for Google Apps Script.
  */
-const gasGlobal = globalThis as unknown as GasGlobal;
+declare var global: any;
 
-gasGlobal.smokeTest = smokeTest;
-gasGlobal.manualSyncTest = manualSyncTest;
-gasGlobal.GooglePropertiesStorage = GooglePropertiesStorage;
-gasGlobal.ConfigurationService = ConfigurationService;
-gasGlobal.GmailService = GmailService;
-gasGlobal.LabelManager = LabelManager;
+global.smokeTest = smokeTest;
+global.manualSyncTest = manualSyncTest;
+global.GooglePropertiesStorage = GooglePropertiesStorage;
+global.ConfigurationService = ConfigurationService;
+global.GmailService = GmailService;
+global.LabelManager = LabelManager;

@@ -12,8 +12,8 @@ describe('ConfigurationService', () => {
     const config = service.getConfig();
     expect(config.version).toBe('1.0');
     expect(config.labels).toHaveProperty('talent');
-    expect(config.labels.talent.nested).toBe(true);
-    expect(config.rules[0].target_label).toBe('talent/Company Name');
+    expect(config.labels['talent']?.nested).toBe(true);
+    expect(config.rules[0]?.target_label).toBe('talent/Company Name');
   });
 
   it('should save and retrieve changes correctly', () => {

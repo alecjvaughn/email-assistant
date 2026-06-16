@@ -1,4 +1,4 @@
-import { StorageAdapter } from './storage';
+import type { StorageAdapter } from './storage';
 import * as fs from 'fs';
 
 /**

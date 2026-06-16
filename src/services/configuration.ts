@@ -1,5 +1,5 @@
-import { StorageAdapter } from './storage';
-import { AppConfig } from '../models/config';
+import type { StorageAdapter } from './storage';
+import type { AppConfig } from '../models/config';
 
 /**
  * Service for managing application configuration.
