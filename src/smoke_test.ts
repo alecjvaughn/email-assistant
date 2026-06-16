@@ -78,7 +78,7 @@ export function manualSyncTest(): void {
 /**
  * Expose functions and classes to the global scope for Google Apps Script.
  */
-declare var global: any;
+declare var global: GasGlobal;
 
 global.smokeTest = smokeTest;
 global.manualSyncTest = manualSyncTest;
